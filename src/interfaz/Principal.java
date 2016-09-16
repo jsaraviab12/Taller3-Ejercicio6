@@ -70,7 +70,19 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel2.setText("Cantidad a Servir");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 30, -1, -1));
+
+        txtServir.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtServirKeyTyped(evt);
+            }
+        });
         jPanel2.add(txtServir, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, 100, -1));
+
+        txtAgregar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtAgregarKeyTyped(evt);
+            }
+        });
         jPanel2.add(txtAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 100, -1));
 
         cmdVaciar.setForeground(new java.awt.Color(153, 0, 0));
@@ -140,6 +152,12 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel5.setText("Capacidad Maxima");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, -1, -1));
+
+        txtActual.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtActualKeyTyped(evt);
+            }
+        });
         jPanel1.add(txtActual, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 100, 90, -1));
 
         txtCapmax.setEditable(false);
@@ -263,6 +281,39 @@ public class Principal extends javax.swing.JFrame {
         txtServir.setEditable(false);
         txtAgregar.setEditable(false);
     }//GEN-LAST:event_cmdBorrarActionPerformed
+
+    private void txtActualKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtActualKeyTyped
+        char c=evt.getKeyChar();
+             
+         
+          if(!Character.isDigit(evt.getKeyChar())) { 
+              getToolkit().beep(); 
+               
+              evt.consume(); 
+          }
+    }//GEN-LAST:event_txtActualKeyTyped
+
+    private void txtAgregarKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAgregarKeyTyped
+ char c=evt.getKeyChar();
+             
+         
+          if(!Character.isDigit(evt.getKeyChar())) { 
+              getToolkit().beep(); 
+               
+              evt.consume(); 
+          }        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAgregarKeyTyped
+
+    private void txtServirKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtServirKeyTyped
+ char c=evt.getKeyChar();
+             
+         
+          if(!Character.isDigit(evt.getKeyChar())) { 
+              getToolkit().beep(); 
+               
+              evt.consume(); 
+          }        // TODO add your handling code here:
+    }//GEN-LAST:event_txtServirKeyTyped
 
     /**
      * @param args the command line arguments
